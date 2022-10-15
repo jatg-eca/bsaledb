@@ -2,6 +2,8 @@ package com.bsale.commerce.bsalecommerce.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface IProductRepository extends CrudRepository {
+import com.bsale.commerce.bsalecommerce.entity.Product;
+
+public interface IProductRepository extends CrudRepository<Product, Long> {
 
 }

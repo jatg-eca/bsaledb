@@ -13,10 +13,18 @@ public class Product implements Serializable{
 	private static final long serialVersionUID =1L;
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long idProduct;
-    @Column(name = "product_name")
+    @Column(name = "name")
     private String productName;
+    @Column(name = "url_image")
+    private String urlImage;
+    @Column (name = "price")
+    private Double price;
+    @Column (name="discount")
+    private Long discount;
+    @JoinColumn(name="category")
+    @ManyToOne
+    private Category category;
 
 }
